@@ -12,9 +12,9 @@
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Text="SAIOA HASI" TextAlignment="Center" FontWeight="Bold" FontSize="28"/>
         <TextBlock Text="Erabiltzailea" Width="200" Margin="0,20,0,0" FontWeight="DemiBold"/>
-        <TextBox x:Name="user" Width="200" Padding="0,3,0,3"/>
+        <TextBox x:Name="user" Width="200" Padding="0,3,0,3" Text="admin"/>
         <TextBlock Text="Pasahitza" Width="200" Margin="0,5,0,0" FontWeight="DemiBold"/>
-        <PasswordBox x:Name="pass" Width="200" Padding="0,3,0,3"/>
+        <PasswordBox x:Name="pass" Width="200" Padding="0,3,0,3" Password="admin"/>
         <Button Click="Sartu" Content="Sartu" Margin="0,25,0,0" Width="100" Padding="5"/>
         <TextBlock x:Name="message" Margin="0,5,0,0" Foreground="Red" TextAlignment="Center"/>
     </StackPanel>

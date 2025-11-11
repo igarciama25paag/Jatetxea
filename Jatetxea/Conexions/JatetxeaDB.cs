@@ -1,5 +1,7 @@
 ﻿using Jatetxea.Data;
 using Npgsql;
+using System.Diagnostics;
+using System.Windows;
 
 namespace Jatetxea.Conexions
 {
@@ -18,18 +20,23 @@ namespace Jatetxea.Conexions
                 $"Password={PASSWORD};" +
                 $"Database={DATABASE}";
 
+        // Trace.WriteLine(); for logs
+
         private delegate void Dispatch(NpgsqlDataSource dataSource);
-        private static async void DBDispatch(Dispatch dispatch)
+        private static void DBDispatch(Dispatch dispatch)
         {
-            try
+            _ = Task.Run(async () =>
             {
-                await using var dataSource = NpgsqlDataSource.Create(CONNECTION);
-                dispatch(dataSource);
-            }
-            catch (NpgsqlException e)
-            {
-                Console.WriteLine("SQL exception: " + e.Message);
-            }
+                try
+                {
+                    await using var dataSource = NpgsqlDataSource.Create(CONNECTION);
+                    dispatch(dataSource);
+                }
+                catch (NpgsqlException e)
+                {
+                    Trace.WriteLine("SQL exception: " + e.Message);
+                }
+            });
         }
 
         private delegate Task<T> Request<T>(NpgsqlDataSource dataSource);
@@ -41,7 +48,7 @@ namespace Jatetxea.Conexions
                 return await request(dataSource);
             } catch (NpgsqlException e)
             {
-                Console.WriteLine("SQL exception: " + e.Message);
+                Trace.WriteLine("SQL exception: " + e.Message);
                 return default!;
             }
         }
@@ -51,13 +58,13 @@ namespace Jatetxea.Conexions
             return await DBRequest(async dataSource => {
                 await using var cmd = dataSource.CreateCommand(
                     "SELECT mota FROM \"Erabiltzaileak\" " +
-                    $"WHERE \"erabiltzailea\" = '{user}' " +
-                    $"AND \"pasahitza\" = '{pass}'"
+                    $"WHERE erabiltzailea = {user} " +
+                    $"AND pasahitza = {pass}"
                     );
                 {
                     await using var reader = await cmd.ExecuteReaderAsync();
                     await reader.ReadAsync();
-                    return Enum.Parse<User.UserTypes>(reader.GetString(0));
+                    return Enum.Parse<User.UserTypes>(reader.GetString(0).Trim());
                 }
             });
         }
@@ -66,7 +73,8 @@ namespace Jatetxea.Conexions
         {
             return await DBRequest(async dataSource => {
                 await using var cmd = dataSource.CreateCommand(
-                    "SELECT *  FROM \"Produktuak\""
+                    "SELECT * FROM \"Produktuak\" " +
+                    "ORDER BY id"
                     );
                 {
                     await using var reader = await cmd.ExecuteReaderAsync();
@@ -75,14 +83,53 @@ namespace Jatetxea.Conexions
                     while (await reader.ReadAsync())
                         produktuak.Add(new(
                             reader.GetInt32(0),
-                            reader.GetString(1),
-                            reader.GetString(2),
+                            reader.GetString(1).Trim(),
+                            reader.GetString(2).Trim(),
                             reader.GetDecimal(3),
                             reader.GetInt32(4)
                             ));
 
                     return produktuak;
                 }
+            });
+        }
+
+        public static void SaveProduktua(Produktua produktua)
+        {
+            DBDispatch(dataSource => {
+                dataSource.CreateCommand(
+                    "UPDATE \"Produktuak\" " +
+                    $"SET izena = '{produktua.Izena}', " +
+                    $"mota = '{produktua.Mota}', " +
+                    $"prezioa = {produktua.Prezioa.ToString().Replace(',','.')}, " +
+                    $"stock = {produktua.Stock} " +
+                    $"WHERE id = {produktua.Id}"
+                    ).ExecuteNonQuery();
+            });
+        }
+        
+        public static void DeleteProduktuak(List<Produktua> produktuak)
+        {
+            if (produktuak.Count > 0) {
+                string ids = $"id = {produktuak[0].Id}";
+                for (int i = 1; i < produktuak.Count; i++)
+                    ids += $" OR id = {produktuak[i].Id}";
+
+                DBDispatch(dataSource => {
+                    dataSource.CreateCommand(
+                        "DELETE FROM \"Produktuak\" " +
+                        $"WHERE {ids}"
+                        ).ExecuteNonQuery();
+                });
+            }
+        }
+        public static void NewProduktua()
+        {
+            DBDispatch(dataSource => {
+                dataSource.CreateCommand(
+                    "INSERT INTO \"Produktuak\" (izena,mota,prezioa,stock) " +
+                    $"VALUES ('produktu_berria','produktu_mota',0,0)"
+                    ).ExecuteNonQuery();
             });
         }
     }
