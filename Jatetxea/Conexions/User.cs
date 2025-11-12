@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Jatetxea.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,24 +9,14 @@ namespace Jatetxea.Conexions
 {
     internal static class User
     {
-        private static string? Name;
-        private static UserTypes? UserType;
+        private static Erabiltzailea? user;
 
-        public static void SetUser(string name, UserTypes type)
+        public static void Login(Erabiltzailea erabiltzailea)
         {
-            ArgumentNullException.ThrowIfNull(name);
+            ArgumentNullException.ThrowIfNull(erabiltzailea);
 
-            Name = name;
-            UserType = type;
+            user = erabiltzailea;
         }
-
-        public static string? GetName() => Name;
-        public static UserTypes? GetUserType() => UserType;
-
-        public enum UserTypes
-        {
-            admin,
-            arrunta
-        }
+        public static Erabiltzailea.ErabiltzaileMotak? GetUserType() => user?.Mota;
     }
 }

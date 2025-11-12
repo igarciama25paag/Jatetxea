@@ -6,9 +6,26 @@
       xmlns:local="clr-namespace:Jatetxea.Windows.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="ErabiltzaileakPage">
+      Title="Erabiltzaileak">
 
-    <Grid>
-        
-    </Grid>
+    <DockPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Bottom">
+            <Button Click="Berria" Content="Berria" Width="100" Height="30" Margin="10"/>
+            <Button x:Name="EzabatuButton" Click="Ezabatu" Content="Ezabatu" IsEnabled="False" Width="100" Height="30" Margin="10"/>
+        </StackPanel>
+
+        <DataGrid x:Name="ErabiltzaileakDataGrid"
+              AutoGenerateColumns="False"
+              SelectionChanged="ErabiltzaileakDataGrid_SelectionChanged"
+              RowEditEnding="ErabiltzaileakDataGrid_RowEditEnding"
+              Background="LightGray">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Erabiltzailea" Binding="{Binding Izena}" Width="*"/>
+                <DataGridTextColumn Header="Pasahitza" Binding="{Binding Pasahitza}" Width="*"/>
+                <DataGridComboBoxColumn Header="Mota" SelectedValueBinding="{Binding Mota}" x:Name="colMota" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </DockPanel>
 </Page>

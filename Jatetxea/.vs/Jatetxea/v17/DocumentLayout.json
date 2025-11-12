@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Interfaces\\Erronka 1\\Jatetxea\\",
+  "WorkspaceRootPath": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\jatetxea\\windows\\pages\\produktuakpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\produktuakpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\pages\\erabiltzaileakpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\erabiltzaileakpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\jatetxea\\windows\\pages\\produktuakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\produktuakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\pages\\erabiltzaileakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\erabiltzaileakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\jatetxea\\conexions\\jatetxeadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\conexions\\jatetxeadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:conexions\\jatetxeadb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -27,40 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProduktuakPage.xaml",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Jatetxea\\Windows\\Pages\\ProduktuakPage.xaml",
-              "RelativeDocumentMoniker": "Windows\\Pages\\ProduktuakPage.xaml",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Jatetxea\\Windows\\Pages\\ProduktuakPage.xaml",
-              "RelativeToolTip": "Windows\\Pages\\ProduktuakPage.xaml",
+              "Title": "ErabiltzaileakPage.xaml",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErabiltzaileakPage.xaml",
+              "RelativeDocumentMoniker": "Windows\\Pages\\ErabiltzaileakPage.xaml",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErabiltzaileakPage.xaml",
+              "RelativeToolTip": "Windows\\Pages\\ErabiltzaileakPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-05T11:53:21.707Z",
+              "WhenOpened": "2025-11-12T07:43:04.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProduktuakPage.xaml.cs",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Jatetxea\\Windows\\Pages\\ProduktuakPage.xaml.cs",
-              "RelativeDocumentMoniker": "Windows\\Pages\\ProduktuakPage.xaml.cs",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Jatetxea\\Windows\\Pages\\ProduktuakPage.xaml.cs",
-              "RelativeToolTip": "Windows\\Pages\\ProduktuakPage.xaml.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAuwEcAAAA2AAAAAAAAAA==",
+              "Title": "ErabiltzaileakPage.xaml.cs",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErabiltzaileakPage.xaml.cs",
+              "RelativeDocumentMoniker": "Windows\\Pages\\ErabiltzaileakPage.xaml.cs",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErabiltzaileakPage.xaml.cs",
+              "RelativeToolTip": "Windows\\Pages\\ErabiltzaileakPage.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T11:57:53.22Z",
+              "WhenOpened": "2025-11-12T11:47:07.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "JatetxeaDB.cs",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Jatetxea\\Conexions\\JatetxeaDB.cs",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Conexions\\JatetxeaDB.cs",
               "RelativeDocumentMoniker": "Conexions\\JatetxeaDB.cs",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Jatetxea\\Conexions\\JatetxeaDB.cs",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Conexions\\JatetxeaDB.cs",
               "RelativeToolTip": "Conexions\\JatetxeaDB.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAD0AAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAmwA0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-05T11:19:06.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-05T11:19:06.011Z"
             }
           ]
         }

@@ -56,10 +56,10 @@ namespace Jatetxea.Windows.Pages
             }), System.Windows.Threading.DispatcherPriority.Background);
         }
 
-        private void Sortu(object sender, RoutedEventArgs e)
+        private void Berria(object sender, RoutedEventArgs e)
         {
             JatetxeaDB.NewProduktua();
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
             UpdateTable();
         }
 
@@ -67,18 +67,25 @@ namespace Jatetxea.Windows.Pages
         {
             var produktuak = ProduktuakDataGrid.SelectedItems.Cast<Produktua>().ToList();
             string message = produktuak[0].Izena;
+            string plur = "";
+            string verb = "duzu";
             if (produktuak.Count > 1)
+            {
                 message = $"{produktuak[1].Izena} eta {message}";
-            for (int i = 2; i < produktuak.Count; i++)
-                message = $"{produktuak[1].Izena}, {message}";
-            string verb = (produktuak.Count > 1) ? "dituzu" : "duzu";
-            if (MessageBox.Show($"{message} ezabatu nahi al {verb}?",
-                "Produktuak ezabatu",
+                plur = "k";
+                verb = "dituzu";
+
+                for (int i = 2; i < produktuak.Count; i++)
+                    message = $"{produktuak[i].Izena}, {message}";
+            }
+
+            if (MessageBox.Show($"{message} produktua{plur} ezabatu nahi al {verb}?",
+                $"Produktua{plur} ezabatu",
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 JatetxeaDB.DeleteProduktuak(produktuak);
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 UpdateTable();
             }
         }

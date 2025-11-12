@@ -1,4 +1,5 @@
 ﻿using Jatetxea.Conexions;
+using Jatetxea.Data;
 using Jatetxea.Windows;
 using System.Windows;
 
@@ -17,12 +18,12 @@ namespace Jatetxea.Windows
         {
             try
             {
-                User.SetUser(user.Text, await JatetxeaDB.GetUserType(user.Text, pass.Password));
+                User.Login(await JatetxeaDB.GetErabiltzailea(user.Text, pass.Password));
                 switch (User.GetUserType())
                 {
-                    case User.UserTypes.admin:
+                    case Erabiltzailea.ErabiltzaileMotak.admin:
                         new AdminWindow().Show(); break;
-                    case User.UserTypes.arrunta:
+                    case Erabiltzailea.ErabiltzaileMotak.arrunta:
                         new ArruntaWindow().Show(); break;
                     default:
                         throw new NoMatchingWindowTypeForUserTypeException($"No window found for UserType '{User.GetUserType()}'");

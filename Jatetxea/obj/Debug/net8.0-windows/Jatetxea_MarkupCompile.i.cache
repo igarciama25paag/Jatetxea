@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\Interfaces\Erronka 1\Jatetxea\obj\Debug\net8.0-windows\
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\
 Jatetxea
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-D:\Interfaces\Erronka 1\Jatetxea\App.xaml
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\App.xaml
 5-356607567
 
-13396510744
+14-298400653
 201-731604999
 Windows\AdminWindow.xaml;Windows\ArruntaWindow.xaml;Windows\LoginWindow.xaml;Windows\Pages\ErabiltzaileakPage.xaml;Windows\Pages\ProduktuakPage.xaml;
 
