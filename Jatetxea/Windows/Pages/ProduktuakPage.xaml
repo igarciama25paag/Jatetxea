@@ -8,18 +8,17 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Produktuak">
 
-    <DockPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Bottom">
-            <Button Click="Berria" Content="Berria" Width="100" Height="30" Margin="10"/>
-            <Button x:Name="EzabatuButton" Click="Ezabatu" Content="Ezabatu" IsEnabled="False" Width="100" Height="30" Margin="10"/>
-        </StackPanel>
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
         <DataGrid x:Name="ProduktuakDataGrid"
                   ItemsSource="{Binding ProduktuakList}"
                   AutoGenerateColumns="False"
                   SelectionChanged="ProduktuakDataGrid_SelectionChanged"
-                  RowEditEnding="ProduktuakDataGrid_RowEditEnding"
-                  Background="LightGray">
+                  RowEditEnding="ProduktuakDataGrid_RowEditEnding">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Produktua" Binding="{Binding Izena}" Width="2*"/>
@@ -28,6 +27,13 @@
                 <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        
-    </DockPanel>
+
+        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Click="Berria" Content="Berria" Width="100" Height="30" Margin="10"/>
+                <Button x:Name="EzabatuButton" Click="Ezabatu" Content="Ezabatu" IsEnabled="False" Width="100" Height="30" Margin="10"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
 </Page>

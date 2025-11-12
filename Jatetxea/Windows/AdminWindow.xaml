@@ -7,17 +7,28 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Admin" Height="450" Width="800">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="White">
             <Button Click="Produktuak" Content="Produktuak" Margin="10" Height="50"/>
             <Button Click="Erabiltzaileak" Content="Erabiltzaileak" Margin="10" Height="50"/>
         </StackPanel>
-        
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Loaded="Produktuak"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Button Click="Logout" Content="Saioa itxi" Margin="10,5" Height="30"/>
+            <Button Click="Exit" Content="Irten" Margin="10,5" Height="30"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.RowSpan="2" Loaded="Produktuak"/>
     </Grid>
 </Window>

@@ -8,17 +8,16 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Erabiltzaileak">
 
-    <DockPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Bottom">
-            <Button Click="Berria" Content="Berria" Width="100" Height="30" Margin="10"/>
-            <Button x:Name="EzabatuButton" Click="Ezabatu" Content="Ezabatu" IsEnabled="False" Width="100" Height="30" Margin="10"/>
-        </StackPanel>
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
         <DataGrid x:Name="ErabiltzaileakDataGrid"
               AutoGenerateColumns="False"
               SelectionChanged="ErabiltzaileakDataGrid_SelectionChanged"
-              RowEditEnding="ErabiltzaileakDataGrid_RowEditEnding"
-              Background="LightGray">
+              RowEditEnding="ErabiltzaileakDataGrid_RowEditEnding">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Erabiltzailea" Binding="{Binding Izena}" Width="*"/>
@@ -27,5 +26,13 @@
             </DataGrid.Columns>
         </DataGrid>
 
-    </DockPanel>
+
+        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Click="Berria" Content="Berria" Width="100" Height="30" Margin="10"/>
+                <Button x:Name="EzabatuButton" Click="Ezabatu" Content="Ezabatu" IsEnabled="False" Width="100" Height="30" Margin="10"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
 </Page>

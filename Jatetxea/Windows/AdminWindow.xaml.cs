@@ -1,4 +1,5 @@
-﻿using Jatetxea.Windows.Pages;
+﻿using Jatetxea.Conexions;
+using Jatetxea.Windows.Pages;
 using System.Windows;
 
 namespace Jatetxea.Windows
@@ -18,6 +19,18 @@ namespace Jatetxea.Windows
         private void Erabiltzaileak(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new ErabiltzaileakPage());
+        }
+
+        private void Logout(object sender, RoutedEventArgs e)
+        {
+            User.Login(null);
+            new LoginWindow().Show();
+            Close();
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

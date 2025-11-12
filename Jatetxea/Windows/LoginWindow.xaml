@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="LoginWindow" Height="400" Width="400">
+        Title="Saio hasi" Height="400" Width="400">
     
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Text="SAIOA HASI" TextAlignment="Center" FontWeight="Bold" FontSize="28"/>

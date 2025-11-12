@@ -11,12 +11,8 @@ namespace Jatetxea.Conexions
     {
         private static Erabiltzailea? user;
 
-        public static void Login(Erabiltzailea erabiltzailea)
-        {
-            ArgumentNullException.ThrowIfNull(erabiltzailea);
+        public static void Login(Erabiltzailea? erabiltzailea) => user = erabiltzailea;
 
-            user = erabiltzailea;
-        }
         public static Erabiltzailea.ErabiltzaileMotak? GetUserType() => user?.Mota;
     }
 }
