@@ -8,31 +8,38 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Erabiltzaileak">
 
-    <Grid Background="WhiteSmoke">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+    <Border BorderBrush="DarkGray" BorderThickness="1">
+        <Grid Background="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <DataGrid x:Name="ErabiltzaileakDataGrid"
-              AutoGenerateColumns="False"
-              SelectionChanged="ErabiltzaileakDataGrid_SelectionChanged"
-              RowEditEnding="ErabiltzaileakDataGrid_RowEditEnding">
+            <TextBlock Text="ERABILTZAILEAK" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       FontWeight="Bold"/>
 
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Erabiltzailea" Binding="{Binding Izena}" Width="*"/>
-                <DataGridTextColumn Header="Pasahitza" Binding="{Binding Pasahitza}" Width="*"/>
-                <DataGridComboBoxColumn Header="Mota" SelectedValueBinding="{Binding Mota}" x:Name="colMota" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
+            <DataGrid x:Name="ErabiltzaileakDataGrid"
+                      Grid.Row="1"
+                      AutoGenerateColumns="False"
+                      SelectionChanged="ErabiltzaileakDataGrid_SelectionChanged"
+                      RowEditEnding="ErabiltzaileakDataGrid_RowEditEnding">
 
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Erabiltzailea" Binding="{Binding Izena}" Width="*"/>
+                    <DataGridTextColumn Header="Pasahitza" Binding="{Binding Pasahitza}" Width="*"/>
+                    <DataGridComboBoxColumn Header="Mota" SelectedValueBinding="{Binding Mota}" x:Name="colMota" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
 
-        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Click="Berria" Content="Berria" Width="100" Height="30" Margin="10"/>
                 <Button x:Name="EzabatuButton" Click="Ezabatu" Content="Ezabatu" IsEnabled="False" Width="100" Height="30" Margin="10"/>
             </StackPanel>
-        </Border>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Page>

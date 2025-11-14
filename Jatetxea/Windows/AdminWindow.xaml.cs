@@ -1,6 +1,8 @@
 ﻿using Jatetxea.Conexions;
 using Jatetxea.Windows.Pages;
 using System.Windows;
+using System.Windows.Media;
+using System.Windows.Navigation;
 
 namespace Jatetxea.Windows
 {
@@ -31,6 +33,23 @@ namespace Jatetxea.Windows
         private void Exit(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            produktuakButton.Background = Brushes.LightGray;
+            erabiltzaileakButton.Background = Brushes.LightGray;
+
+            switch (MainFrame.NavigationService.Content)
+            {
+                case ProduktuakPage _:
+                    produktuakButton.Background = Brushes.LightGreen;
+                    break;
+                case ErabiltzaileakPage _:
+                    erabiltzaileakButton.Background = Brushes.LightGreen;
+                    break;
+            }
+            
         }
     }
 }

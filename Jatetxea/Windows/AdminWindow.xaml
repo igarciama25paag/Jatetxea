@@ -20,8 +20,8 @@
         </Grid.RowDefinitions>
 
         <StackPanel Background="White">
-            <Button Click="Produktuak" Content="Produktuak" Margin="10" Height="50"/>
-            <Button Click="Erabiltzaileak" Content="Erabiltzaileak" Margin="10" Height="50"/>
+            <Button Click="Produktuak" x:Name="produktuakButton" Content="Produktuak" Margin="10" Height="50"/>
+            <Button Click="Erabiltzaileak" x:Name="erabiltzaileakButton" Content="Erabiltzaileak" Margin="10" Height="50"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
@@ -29,6 +29,6 @@
             <Button Click="Exit" Content="Irten" Margin="10,5" Height="30"/>
         </StackPanel>
 
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.RowSpan="2" Loaded="Produktuak"/>
+        <Frame x:Name="MainFrame" Navigated="MainFrame_Navigated" NavigationUIVisibility="Hidden" Grid.Column="1" Grid.RowSpan="2" Loaded="Produktuak"/>
     </Grid>
 </Window>
