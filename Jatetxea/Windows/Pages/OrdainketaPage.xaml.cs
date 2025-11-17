@@ -24,5 +24,20 @@ namespace Jatetxea.Windows.Pages
         {
             InitializeComponent();
         }
+
+        private void GehituClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void KenduClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OrdainduEtaInprimatuClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

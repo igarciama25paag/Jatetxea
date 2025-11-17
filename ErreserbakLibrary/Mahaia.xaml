@@ -6,9 +6,14 @@
              xmlns:local="clr-namespace:ErreserbakLibrary"
              mc:Ignorable="d">
 
-    <Button x:Name="eserlekua" Click="EserlekuaClick" Width="{Binding Tamaina}" Height="{Binding Tamaina}">
+    <Button x:Name="mahaia" Click="MahaiaClick" Width="{Binding Tamaina}" Height="{Binding Tamaina}">
         <Grid>
-            <TextBlock Text="{Binding Izena}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding LetraTamaina}" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Izena}"
+                       FontSize="{Binding LetraTamaina}"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"/>
+
             <Image Source="/ErreserbakLibrary;component/mahaia.png"/>
         </Grid>
     </Button>

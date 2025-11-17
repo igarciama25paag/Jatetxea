@@ -39,6 +39,8 @@ D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\bin\Debug\net8.0-windows\Jatetxea.pd
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\bin\Debug\net8.0-windows\Npgsql.dll
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\bin\Debug\net8.0-windows\ErreserbakLibrary.dll
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\bin\Debug\net8.0-windows\ErreserbakLibrary.pdb
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Jatetxea.csproj.AssemblyReference.cache
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\AdminWindow.g.cs
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\ArruntaWindow.g.cs
