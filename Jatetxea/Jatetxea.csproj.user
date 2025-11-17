@@ -14,6 +14,12 @@
     <Compile Update="Windows\Pages\ErabiltzaileakPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Windows\Pages\ErreserbakPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\Pages\OrdainketaPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Windows\Pages\ProduktuakPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

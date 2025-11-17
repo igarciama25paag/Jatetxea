@@ -1,0 +1,16 @@
+<UserControl x:Class="ErreserbakLibrary.Mahaia"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ErreserbakLibrary"
+             mc:Ignorable="d">
+
+    <Button x:Name="eserlekua" Click="EserlekuaClick" Width="{Binding Tamaina}" Height="{Binding Tamaina}">
+        <Grid>
+            <TextBlock Text="{Binding Izena}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="{Binding LetraTamaina}" FontWeight="Bold"/>
+            <Image Source="/ErreserbakLibrary;component/mahaia.png"/>
+        </Grid>
+    </Button>
+
+</UserControl>

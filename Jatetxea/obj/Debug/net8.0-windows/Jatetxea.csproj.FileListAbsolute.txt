@@ -44,6 +44,8 @@ D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Adm
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\ArruntaWindow.g.cs
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\LoginWindow.g.cs
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\ErabiltzaileakPage.g.cs
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\ErreserbakPage.g.cs
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\OrdainketaPage.g.cs
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\ProduktuakPage.g.cs
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\App.g.cs
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Jatetxea_MarkupCompile.cache
@@ -52,6 +54,8 @@ D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Adm
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\ArruntaWindow.baml
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\LoginWindow.baml
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\ErabiltzaileakPage.baml
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\ErreserbakPage.baml
+D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\OrdainketaPage.baml
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Windows\Pages\ProduktuakPage.baml
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Jatetxea.g.resources
 D:\Interfaces\Erronka 1\Aplikazioa\Jatetxea\obj\Debug\net8.0-windows\Jatetxea.GeneratedMSBuildEditorConfig.editorconfig

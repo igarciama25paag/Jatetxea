@@ -7,7 +7,33 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="Arrunta" Height="450" Width="800">
+    
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="White">
+            <Button Click="Ordainketa" x:Name="ordainketaButton" Content="Ordainketa" Margin="10" Height="50"/>
+            <Button Click="Erreserbak" x:Name="erreserbakButton" Content="Erreserbak" Margin="10" Height="50"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Button Click="Logout" Content="Saioa itxi" Margin="10,5" Height="30"/>
+            <Button Click="Exit" Content="Irten" Margin="10,5" Height="30"/>
+        </StackPanel>
+
+        <Frame x:Name="MainFrame"
+               Grid.Column="1"
+               Grid.RowSpan="2"
+               Loaded="Ordainketa"
+               Navigated="MainFrame_Navigated"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

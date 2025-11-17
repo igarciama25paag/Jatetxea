@@ -3,20 +3,18 @@
   "WorkspaceRootPath": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54042CE2-939A-4C3A-A93B-088A4839BD5D}|..\\ErreserbakLibrary\\ErreserbakLibrary.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\erreserbaklibrary\\mahaia.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{54042CE2-939A-4C3A-A93B-088A4839BD5D}|..\\ErreserbakLibrary\\ErreserbakLibrary.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\erreserbaklibrary\\mahaia.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\pages\\produktuakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\produktuakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\pages\\erreserbakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\erreserbakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\pages\\erabiltzaileakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\erabiltzaileakpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|d:\\interfaces\\erronka 1\\aplikazioa\\jatetxea\\windows\\pages\\erreserbakpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1081D754-D0F7-454D-83F3-0BF3F62E5DE5}|Jatetxea.csproj|solutionrelative:windows\\pages\\erreserbakpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +24,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProduktuakPage.xaml",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ProduktuakPage.xaml",
-              "RelativeDocumentMoniker": "Windows\\Pages\\ProduktuakPage.xaml",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ProduktuakPage.xaml",
-              "RelativeToolTip": "Windows\\Pages\\ProduktuakPage.xaml",
+              "DocumentIndex": 0,
+              "Title": "Mahaia.xaml",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\ErreserbakLibrary\\Mahaia.xaml",
+              "RelativeDocumentMoniker": "..\\ErreserbakLibrary\\Mahaia.xaml",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\ErreserbakLibrary\\Mahaia.xaml",
+              "RelativeToolTip": "..\\ErreserbakLibrary\\Mahaia.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-12T13:07:17.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ErabiltzaileakPage.xaml",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErabiltzaileakPage.xaml",
-              "RelativeDocumentMoniker": "Windows\\Pages\\ErabiltzaileakPage.xaml",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErabiltzaileakPage.xaml",
-              "RelativeToolTip": "Windows\\Pages\\ErabiltzaileakPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-12T13:07:03.85Z",
+              "WhenOpened": "2025-11-17T09:30:49.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdminWindow.xaml",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\AdminWindow.xaml",
-              "RelativeDocumentMoniker": "Windows\\AdminWindow.xaml",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\AdminWindow.xaml",
-              "RelativeToolTip": "Windows\\AdminWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-11-12T12:57:39.753Z",
+              "Title": "Mahaia.xaml.cs",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\ErreserbakLibrary\\Mahaia.xaml.cs",
+              "RelativeDocumentMoniker": "..\\ErreserbakLibrary\\Mahaia.xaml.cs",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\ErreserbakLibrary\\Mahaia.xaml.cs",
+              "RelativeToolTip": "..\\ErreserbakLibrary\\Mahaia.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-17T08:57:45.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\AdminWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Windows\\AdminWindow.xaml.cs",
-              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\AdminWindow.xaml.cs",
-              "RelativeToolTip": "Windows\\AdminWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ErreserbakPage.xaml",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErreserbakPage.xaml",
+              "RelativeDocumentMoniker": "Windows\\Pages\\ErreserbakPage.xaml",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErreserbakPage.xaml",
+              "RelativeToolTip": "Windows\\Pages\\ErreserbakPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-17T08:55:55.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ErreserbakPage.xaml.cs",
+              "DocumentMoniker": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErreserbakPage.xaml.cs",
+              "RelativeDocumentMoniker": "Windows\\Pages\\ErreserbakPage.xaml.cs",
+              "ToolTip": "D:\\Interfaces\\Erronka 1\\Aplikazioa\\Jatetxea\\Windows\\Pages\\ErreserbakPage.xaml.cs",
+              "RelativeToolTip": "Windows\\Pages\\ErreserbakPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T12:32:12.607Z",
+              "WhenOpened": "2025-11-17T08:56:00.399Z",
               "EditorCaption": ""
             }
           ]

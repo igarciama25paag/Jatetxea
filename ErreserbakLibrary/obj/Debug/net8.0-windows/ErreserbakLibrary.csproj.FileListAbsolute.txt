@@ -1,0 +1,17 @@
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\bin\Debug\net8.0-windows\ErreserbakLibrary.deps.json
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\bin\Debug\net8.0-windows\ErreserbakLibrary.dll
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\bin\Debug\net8.0-windows\ErreserbakLibrary.pdb
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\Mahaia.g.cs
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary_MarkupCompile.cache
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary_MarkupCompile.lref
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\Mahaia.baml
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.g.resources
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.AssemblyInfoInputs.cache
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.AssemblyInfo.cs
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.csproj.CoreCompileInputs.cache
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.sourcelink.json
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.dll
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\refint\ErreserbakLibrary.dll
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ErreserbakLibrary.pdb
+D:\Interfaces\Erronka 1\Aplikazioa\ErreserbakLibrary\obj\Debug\net8.0-windows\ref\ErreserbakLibrary.dll
