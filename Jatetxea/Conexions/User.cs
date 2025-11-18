@@ -9,7 +9,7 @@ namespace Jatetxea.Conexions
 {
     internal static class User
     {
-        private static Erabiltzailea? user;
+        public static Erabiltzailea? user { get; set; }
 
         public static void Login(Erabiltzailea? erabiltzailea) => user = erabiltzailea;
 

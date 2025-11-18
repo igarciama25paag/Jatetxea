@@ -61,7 +61,7 @@ namespace ErreserbakLibrary {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ErreserbakLibrary;component/mahaia.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ErreserbakLibrary;V1.0.0.0;component/mahaia.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Mahaia.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -66,8 +66,8 @@ namespace Jatetxea.Conexions
                     $"WHERE izena = '{user}' " +
                     $"AND pasahitza = '{pass}'"
                     );
+                await using var reader = await cmd.ExecuteReaderAsync();
                 {
-                    await using var reader = await cmd.ExecuteReaderAsync();
                     await reader.ReadAsync();
 
                     return new Erabiltzailea(
@@ -91,9 +91,8 @@ namespace Jatetxea.Conexions
                     "SELECT * FROM \"Produktuak\" " +
                     "ORDER BY id"
                     );
+                await using var reader = await cmd.ExecuteReaderAsync();
                 {
-                    await using var reader = await cmd.ExecuteReaderAsync();
-
                     List<Produktua> produktuak = [];
                     while (await reader.ReadAsync())
                         produktuak.Add(new(
@@ -154,9 +153,8 @@ namespace Jatetxea.Conexions
                     "SELECT * FROM \"Erabiltzaileak\" " +
                     "ORDER BY mota"
                     );
+                await using var reader = await cmd.ExecuteReaderAsync();
                 {
-                    await using var reader = await cmd.ExecuteReaderAsync();
-
                     List<Erabiltzailea> erabiltzaileak = [];
                     while (await reader.ReadAsync())
                         erabiltzaileak.Add(new(
@@ -212,6 +210,59 @@ namespace Jatetxea.Conexions
                     $"WHERE {ids}"
                     );
             }
+        }
+
+        /**
+         * ERRESERBAK
+         * **/
+
+        public static async Task<List<Erreserba>> GetErreserbak(DateTime data, Erreserba.Janordua janordua)
+        {
+            return await DBRequest(async dataSource => {
+                await using var cmd = dataSource.CreateCommand(
+                    "SELECT U.izena, E.mahaia FROM \"Erreserbak\" E " +
+                    "INNER JOIN \"Erabiltzaileak\" U " +
+                    "ON E.erabiltzailea = U.id " +
+                    $"WHERE data = '{data:yyyy-MM-dd}' " +
+                    $"AND janordua = '{janordua}' " +
+                    $"ORDER BY mahaia"
+                    );
+                await using var reader = await cmd.ExecuteReaderAsync();
+                {
+                    Dictionary<string, List<string>> map = [];
+                    while (await reader.ReadAsync())
+                    {
+                        string username = reader.GetString(0).Trim();
+                        if (!map.ContainsKey(username)) map.Add(username, []);
+                        map[username].Add(reader.GetString(1));
+                    }
+
+                    List<Erreserba> erreserbak = [];
+                    foreach (string key in map.Keys)
+                        erreserbak.Add(new(key, map[key]));
+
+                    return erreserbak;
+                }
+            });
+        }
+
+        public static void SaveErreserba(DateTime data, Erreserba.Janordua janordua, Erreserba erreserba)
+        {
+            foreach (var m in erreserba.Mahaiak)
+                DBDispatch(
+                    "INSERT INTO \"Erreserbak\" (data,janordua,mahaia,erabiltzailea)" +
+                    $"VALUES ('{data:yyyy-MM-dd}', '{janordua}', '{m}', {User.user!.Id})"
+                    );
+        }
+
+        public static void DeleteErreserba(DateTime data, Erreserba.Janordua janordua)
+        {
+            DBDispatch(
+                "DELETE FROM \"Erreserbak\" " +
+                $"WHERE data = '{data:yyyy-MM-dd}' " +
+                $"AND janordua = '{janordua}' " +
+                $"AND erabiltzailea = {User.user!.Id}"
+                );
         }
     }
 }

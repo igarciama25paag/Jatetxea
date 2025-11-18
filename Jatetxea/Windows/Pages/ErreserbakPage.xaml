@@ -14,7 +14,6 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
@@ -25,40 +24,56 @@
            FontSize="24"
            FontWeight="Bold"/>
 
-        <StackPanel Grid.Row="1"
-                    Orientation="Horizontal"
-                    HorizontalAlignment="Center"
-                    Margin="10">
+        <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="10">
 
-            <DatePicker x:Name="datePicker"
-                        VerticalAlignment="Center"
-                        DisplayDateStart="{x:Static sys:DateTime.Now}"
-                        SelectedDate="{x:Static sys:DateTime.Now}"
-                        Margin="20,0"/>
+                    <DatePicker x:Name="datePicker"
+                                SelectedDateChanged="SelectedDateChanged"
+                                VerticalAlignment="Center"
+                                DisplayDateStart="{x:Static sys:DateTime.Now}"
+                                SelectedDate="{x:Static sys:DateTime.Now}"
+                                Margin="20,0"/>
 
-            <StackPanel VerticalAlignment="Center">
-                <RadioButton x:Name="bazkariaCheckBox" GroupName="janordua" Content="Bazkaria" Margin="0,5" IsChecked="True"/>
-                <RadioButton x:Name="afariaCheckBox" GroupName="janordua" Content="Afaria" Margin="0,5"/>
+                    <StackPanel VerticalAlignment="Center">
+                        <RadioButton x:Name="bazkariaCheckBox"
+                                     Checked="CheckBoxChecked"
+                                     GroupName="janordua"
+                                     Content="Bazkaria"
+                                     Margin="0,5"
+                                     IsChecked="True"/>
+                        <RadioButton x:Name="afariaCheckBox"
+                                     Checked="CheckBoxChecked"
+                                     GroupName="janordua"
+                                     Content="Afaria"
+                                     Margin="0,5"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel x:Name="mahaiak" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
-
-        </StackPanel>
-
-        <Border Grid.Row="2" BorderBrush="DarkGray" BorderThickness="1">
-            <StackPanel x:Name="mahaiak" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Border>
 
-        <StackPanel Grid.Row="3"
+        <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center">
 
             <StackPanel>
                 <TextBlock Text="Erreserbak:" Margin="10,0,0,0" FontWeight="Bold"/>
-                <ListBox x:Name="listBoxErreserbak" Width="300" Height="70" Margin="10,5"/>
+                <ListBox x:Name="listBoxErreserbak"
+                         ItemsSource="{Binding ErreserbakList}"
+                         SelectionChanged="Erreserbak_SelectionChanged"
+                         Width="300" Height="70" Margin="10,5"/>
             </StackPanel>
             
             <Button Content="Erreserbatu" Click="ErreserbatuClick" Width="120" Height="30" Margin="10"/>
-            <Button Content="Erreserba ezabatu" Click="ErreserbaEzabatuClick" Width="120" Height="30" Margin="10"/>
+            <Button x:Name="ezabatuButton"
+                    Content="Erreserba ezabatu"
+                    Click="ErreserbaEzabatuClick"
+                    IsEnabled="False" Width="120" Height="30" Margin="10"/>
             
         </StackPanel>
 
