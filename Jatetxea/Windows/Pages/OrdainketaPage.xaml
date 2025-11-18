@@ -10,9 +10,9 @@
 
     <Grid Background="WhiteSmoke">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.5*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="ORDAINKETA" 
@@ -22,18 +22,24 @@
                    FontWeight="Bold"/>
 
         <Border Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1">
-            
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20,0,20,20">
+                    <TextBlock Text="Totala:" FontWeight="Bold" Margin="0,0,10,0"/>
+                    <TextBox Width="100" IsEnabled="False"/>
+                </StackPanel>
+                <ListBox Margin="20"/>
+            </DockPanel>
         </Border>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
-            <StackPanel>
-                <TextBlock Text="Produktu motak:" FontWeight="Bold"/>
-                <ListBox Height="70" Margin="5" Width="150"/>
-            </StackPanel>
-            <StackPanel>
-                <TextBlock Text="Produktuak:" FontWeight="Bold"/>
-                <ListBox Height="70" Margin="5" Width="150"/>
-            </StackPanel>
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Produktu motak:" FontWeight="Bold"/>
+                <ListBox Margin="5" Width="150"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="Produktuak:" FontWeight="Bold"/>
+                <ListBox Margin="5" Width="150"/>
+            </DockPanel>
 
             <StackPanel VerticalAlignment="Center">
                 <Button Content="Gehitu" Click="GehituClick" Width="100" Height="30" Margin="5"/>
