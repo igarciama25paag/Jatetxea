@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="ERRESERBAK" 
@@ -58,7 +58,6 @@
 
         <StackPanel Grid.Row="2"
                     Orientation="Horizontal"
-                    VerticalAlignment="Center"
                     HorizontalAlignment="Center">
 
             <DockPanel>
@@ -67,15 +66,14 @@
                          ItemsSource="{Binding ErreserbakList}"
                          SelectionChanged="Erreserbak_SelectionChanged"
                          Width="300" Margin="10,5"/>
-            <DockPanel/>
-            
+            </DockPanel>
+
             <Button Content="Erreserbatu" Click="ErreserbatuClick" Width="120" Height="30" Margin="10"/>
             <Button x:Name="ezabatuButton"
                     Content="Erreserba ezabatu"
                     Click="ErreserbaEzabatuClick"
                     IsEnabled="False" Width="120" Height="30" Margin="10"/>
-            
-        </StackPanel>
 
+        </StackPanel>
     </Grid>
 </Page>

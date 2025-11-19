@@ -14,7 +14,14 @@ namespace Jatetxea.Windows
 
         private class NoMatchingWindowTypeForUserTypeException(string message) : Exception(message);
 
-        private async void Sartu(object sender, RoutedEventArgs e)
+        private void Sartu(object sender, RoutedEventArgs e) => SaioaHasi();
+
+        private void SaioaHasi_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == System.Windows.Input.Key.Enter) SaioaHasi();
+        }
+
+        private async void SaioaHasi()
         {
             try
             {
@@ -39,6 +46,15 @@ namespace Jatetxea.Windows
                 message.Text = ex.Message;
             }
             finally { pass.Password = null; }
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Aplikazioa itxi nahi al duzu?",
+                "Irten",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question) == MessageBoxResult.Yes)
+                Close();
         }
     }
 }

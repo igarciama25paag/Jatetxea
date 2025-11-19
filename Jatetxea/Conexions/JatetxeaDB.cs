@@ -2,6 +2,7 @@
 using Npgsql;
 using System.Diagnostics;
 using System.Windows;
+using static Jatetxea.Data.Erreserba;
 
 namespace Jatetxea.Conexions
 {
@@ -263,6 +264,63 @@ namespace Jatetxea.Conexions
                 $"AND janordua = '{janordua}' " +
                 $"AND erabiltzailea = {User.user!.Id}"
                 );
+        }
+
+        /**
+         * ORDAINKETA
+         * **/
+
+        public static async Task<List<string>> GetProduktuMotak()
+        {
+            return await DBRequest(async dataSource => {
+                await using var cmd = dataSource.CreateCommand(
+                    "SELECT mota FROM \"Produktuak\" " +
+                    "GROUP BY mota " +
+                    "ORDER BY mota"
+                    );
+                await using var reader = await cmd.ExecuteReaderAsync();
+                {
+                    List<string> motak = [];
+                    while (await reader.ReadAsync())
+                        motak.Add(reader.GetString(0));
+                    return motak;
+                }
+            });
+        }
+
+        public static async Task<List<Produktua>> GetMotatakoProduktuak(string mota)
+        {
+            return await DBRequest(async dataSource => {
+                await using var cmd = dataSource.CreateCommand(
+                    "SELECT * FROM \"Produktuak\" " +
+                    $"WHERE mota = '{mota}' " +
+                    "ORDER BY id"
+                    );
+                await using var reader = await cmd.ExecuteReaderAsync();
+                {
+                    List<Produktua> produktuak = [];
+                    while (await reader.ReadAsync())
+                        produktuak.Add(new(
+                            reader.GetInt16(0),
+                            reader.GetString(1).Trim(),
+                            reader.GetString(2).Trim(),
+                            reader.GetDecimal(3),
+                            reader.GetInt16(4)
+                            ));
+
+                    return produktuak;
+                }
+            });
+        }
+
+        public static void RemoveProduktuStock(Dictionary<Produktua, int> produktuak)
+        {
+            foreach (var p in produktuak.Keys)
+                DBDispatch(
+                    "UPDATE \"Produktuak\" " +
+                    $"SET stock = stock - {produktuak[p]} " +
+                    $"WHERE id = {p.Id}"
+                    );
         }
     }
 }

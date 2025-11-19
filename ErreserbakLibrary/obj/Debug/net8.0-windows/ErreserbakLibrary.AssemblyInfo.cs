@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ErreserbakLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56e91e028dfaaa649cade05e0c1cdad9a32c004a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d58ad5389e7d2166d9a3c7c2b5da9a99356b713")]
 [assembly: System.Reflection.AssemblyProductAttribute("ErreserbakLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ErreserbakLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

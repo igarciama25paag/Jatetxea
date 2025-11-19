@@ -25,28 +25,44 @@
             <DockPanel>
                 <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="20,0,20,20">
                     <TextBlock Text="Totala:" FontWeight="Bold" Margin="0,0,10,0"/>
-                    <TextBox Width="100" IsEnabled="False"/>
+                    <TextBox x:Name="totalaBox" Text="0,00 €"
+                             TextAlignment="Right" FontWeight="Bold" Width="100" IsEnabled="False"/>
                 </StackPanel>
-                <ListBox Margin="20"/>
+
+                <ListBox x:Name="ticketListBox"
+                         ItemsSource="{Binding Ticket}"
+                         SelectionChanged="Ticket_SelectionChanged"
+                         Margin="20"/>
             </DockPanel>
         </Border>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" Text="Produktu motak:" FontWeight="Bold"/>
-                <ListBox Margin="5" Width="150"/>
+                <ListBox x:Name="produktuMotakListBox"
+                         ItemsSource="{Binding ProduktuMotakList}"
+                         SelectionChanged="ProduktuMota_SelectionChanged"
+                         Margin="5" Width="150"/>
             </DockPanel>
+
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" Text="Produktuak:" FontWeight="Bold"/>
-                <ListBox Margin="5" Width="150"/>
+                <ListBox ItemsSource="{Binding ProduktuakList}"
+                         DisplayMemberPath="DisplayName"
+                         MouseDoubleClick="DoubleClick_ProduktuakList"
+                         Margin="5" Width="150"/>
             </DockPanel>
 
             <StackPanel VerticalAlignment="Center">
-                <Button Content="Gehitu" Click="GehituClick" Width="100" Height="30" Margin="5"/>
-                <Button Content="Kendu" Click="KenduClick" Width="100" Height="30" Margin="5"/>
+                <Button x:Name="kenduButton"
+                        Click="KenduClick"
+                        IsEnabled="False"
+                        Content="Kendu" Width="150" Height="30" Margin="5"/>
+                <Button x:Name="ordainduButton"
+                        Click="OrdainduEtaInprimatuClick"
+                        IsEnabled="False"
+                        Content="Ordaindu eta Inprimatu" Width="150" Height="30" Margin="5"/>
             </StackPanel>
-            <Button Content="Ordaindu eta Inprimatu" Click="OrdainduEtaInprimatuClick" Width="150" Height="30" Margin="5"/>
         </StackPanel>
-        
     </Grid>
 </Page>

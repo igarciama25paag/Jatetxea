@@ -1,23 +1,9 @@
 ﻿using ErreserbakLibrary;
 using Jatetxea.Conexions;
 using Jatetxea.Data;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using static Jatetxea.Data.Erreserba;
 
 namespace Jatetxea.Windows.Pages
 {
@@ -80,13 +66,31 @@ namespace Jatetxea.Windows.Pages
 
             if(trueMahaiak.Count > 0)
             {
-                Erreserba ersBerria = new(User.user!.Izena, []);
-                foreach (var m in trueMahaiak)
+                string message = trueMahaiak[0].Izena;
+                string plur = "";
+                string verb = "duzu";
+                if (trueMahaiak.Count > 1)
                 {
-                    m.Erreserbatu(true);
-                    ersBerria.Mahaiak.Add(m.Izena);
+                    message = $"{trueMahaiak[1].Izena} eta {message}";
+                    plur = "k";
+                    verb = "dituzu";
+
+                    for (int i = 2; i < trueMahaiak.Count; i++)
+                        message = $"{trueMahaiak[i].Izena}, {message}";
+                }   
+                if (MessageBox.Show($"{message} mahia{plur} erreserbatu nahi al {verb}?",
+                    $"Mahaia{plur} erreserbatu",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    Erreserba ersBerria = new(User.user!.Izena, []);
+                    foreach (var m in trueMahaiak)
+                    {
+                        m.Erreserbatu(true);
+                        ersBerria.Mahaiak.Add(m.Izena);
+                    }
+                    JatetxeaDB.SaveErreserba(datePicker.SelectedDate!.Value, GetJanordua(), ersBerria);
                 }
-                JatetxeaDB.SaveErreserba(datePicker.SelectedDate!.Value, GetJanordua(), ersBerria);
             } else MessageBox.Show("Ez da erreserbatzeko mahirik aukeratu",
                     "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             Thread.Sleep(500);
@@ -102,7 +106,13 @@ namespace Jatetxea.Windows.Pages
         {
             if (listBoxErreserbak.SelectedItem is Erreserba erreserba)
                 if (erreserba.UserName == User.user!.Izena)
-                    JatetxeaDB.DeleteErreserba(datePicker.SelectedDate!.Value, GetJanordua());
+                {
+                    if (MessageBox.Show($"Erreserba ezabatu nahi al duzu?",
+                        $"Erreserba ezabatu",
+                        MessageBoxButton.YesNo,
+                        MessageBoxImage.Question) == MessageBoxResult.Yes)
+                        JatetxeaDB.DeleteErreserba(datePicker.SelectedDate!.Value, GetJanordua());
+                }
                 else MessageBox.Show("Ezin duzu zurea ez den erreserba bat ezabatu",
                     "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             Thread.Sleep(500);

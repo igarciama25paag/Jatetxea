@@ -38,14 +38,24 @@ namespace Jatetxea.Windows
 
         private void Logout(object sender, RoutedEventArgs e)
         {
-            User.Login(null);
-            new LoginWindow().Show();
-            Close();
+            if (MessageBox.Show("Saioa itxi nahi al duzu?",
+                "Saioa itxi",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                User.Login(null);
+                new LoginWindow().Show();
+                Close();
+            }
         }
 
         private void Exit(object sender, RoutedEventArgs e)
         {
-            Close();
+            if (MessageBox.Show("Aplikazioa itxi nahi al duzu?",
+                "Irten",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question) == MessageBoxResult.Yes)
+                Close();
         }
 
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
