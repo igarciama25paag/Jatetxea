@@ -9,7 +9,7 @@ services:
       - 5432:5432
     
     volumes:
-    - ./backup.sql:/docker-entrypoint-initdb.d/backup.sql
+    - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
     - ./postgresql:/var/lib/postgresql
 
     environment:
@@ -19,6 +19,7 @@ services:
 
   adminer:
     image: adminer
+    container_name: adminer_jatetxea
     restart: always
     ports:
       - 8080:8080
